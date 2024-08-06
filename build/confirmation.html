@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- when upgrading formspree subscription  use this confirmation instead-->
+<head>
+  <title>Confirmation</title> <!-- Title of the page -->
+  <meta name="description" content="Confirmation page for hiring"> <!-- Page description -->
+  <meta name="author" content="faisal alassaf"> <!-- Page author -->
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon-48x48.png" sizes="48x48">
+  <link rel="icon" type="image/png" href="favicon-64x64.png" sizes="64x64">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css"> <!--style-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+</head>
+
+<header>
+  <div class="navbar">
+      <a href="index.html" class="logo">
+          <img src="logo.png" alt="Ararco Logo">
+          ARARCO
+      </a>
+      <a href="index.html#Home">Home</a>
+      <a href="index.html#about-section">About Us</a>
+      <a href="index.html#Contact">Contact Us</a>
+  </div>
+</header>
+
+<body>
+  <main class="confirmation-container">
+    <div class="confirmation-message">
+      <h2>Thank You!</h2>
+      <p>Your application has been submitted successfully. We will review your information and get back to you shortly.</p>
+      <a href="index.html" class="button">Go Back to Homepage</a>
+    </div>
+  </main>
+
+
+  <footer align="center">
+    <section id="Contact" class="contact-section">
+      <h2>Contact Us</h2>
+      <div class="contact-details">
+        <div class="contact-details">
+          <div class="contact-item">
+            <h3>Dammam</h3>
+            <p>Novotel Business Park<br>
+               King Fahd Highway<br>
+               Al Khalidiyah Ash Shamaliyah<br>
+               Saudi Arabia</p>
+          </div>
+          <div class="contact-item">
+            <h3>Inquiries</h3>
+            <p><a href="mailto:info@rajhiholdings.com">info@rajhiholdings.com</a></p>
+            
+            <p>DMM: <a href="tel:+966138055555">+966 13 805 5555</a></p>
+         
+            <p>BH:  <a href="tel:+97317564100">+966 1 756 4100</a></p>
+          </div>
+          <div class="contact-item">
+            <h3>Bahrain</h3>
+            <p>Harbour House<br>
+               Bahrain Financial Harbour<br>
+               King Faisal Highway<br>
+               Manama, Bahrain</p>
+          </div>
+
+      <div class="contact-footer">
+        <p>1974 ARARCO. All rights reserved.</p>
+      </div>
+      
+    </section>
+   </footer>
+  
+  
+
+   
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const contactSection = document.querySelector('.contact-section');
+    
+        const handleScroll = () => {
+          const sectionTop = contactSection.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+    
+          if (sectionTop < windowHeight * 0.9) { // Trigger animation when section is 90% in view
+            contactSection.classList.add('visible');
+          }
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Trigger animation on initial load
+      });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Abdulrahman Saleh Al Rajhi & Partners Co. Ltd.</title>
+  <!-- Meta tags -->
+  <meta name="author" content="Faisal alassaf"><!--author-->
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon-48x48.png" sizes="48x48">
+  <link rel="icon" type="image/png" href="favicon-64x64.png" sizes="64x64">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css"> <!--style-->
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+
+</head>
+
+<body align="center">
+
+  <div id="loading-overlay">
+    <div id="loading-spinner"></div>
+    <div id="loading-text">Please wait...</div>
+  </div>
+
+  <header>
+    <div class="navbar">
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Ararco Logo">
+            ARARCO
+        </a>
+        <a href="index.html#Home">Home</a>
+        <a href="index.html#about-section">About Us</a>
+        <a href="index.html#Contact">Contact Us</a>
+    </div>
+</header>
+  <section id="Home">
+    <h2></h2>
+    <div class="hero">
+        <div class="overlay">
+            <div>
+                <h1>Abdulrahman Saleh Al Rajhi & Partners Co. Ltd.</h1>
+                <p>Leading the way in general trade and investment solutions.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="about-section" class="about-section">
+    <h2>About Us</h2>
+    <div class="about-content">
+      <p>Abdulrahman Saleh Al Rajhi & Partners Co. Ltd. is a leading company specializing in general trade and investment. Founded with the mission to drive economic growth and foster innovative business solutions, we are committed to delivering excellence and creating value for our clients and partners.</p>
+      <div class="vision-mission-container">
+        <div class="vision-mission">
+          <h3>Our Vision</h3>
+          <p>The group's investment principles center around taking a long-term, proactive, and value investment view to its portfolio.</p>
+        </div>
+        <div class="vision-mission">
+          <h3>Our Mission</h3>
+          <p>We invest selectively and limit the number of companies we participate in to ensure we can continually
+             add value through our own internal resources. We bring to the table extensive strategic, operational, and financial expertise and strive to work closely with the management of the investee companies in order to realize their long-term potential.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- a trigger to make sure animation fades in when reader sees it -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Creates an Intersection Observer instance
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          } else {
+            entry.target.classList.remove('animate');
+          }
+        });
+      }, {
+        threshold: 0.5 
+      });
+
+      // Observe the vision-mission elements
+      const visionMissionElements = document.querySelectorAll('.vision-mission');
+      visionMissionElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+  
+
+  <footer align="center">
+    <section id="Contact" class="contact-section">
+      <h2>Contact Us</h2>
+      <div class="contact-details">
+        <div class="contact-details">
+          <div class="contact-item">
+            <h3>Dammam</h3>
+            <p>Novotel Business Park<br>
+               King Fahd Highway<br>
+               Al Khalidiyah Ash Shamaliyah<br>
+               Saudi Arabia</p>
+          </div>
+          <div class="contact-item">
+            <h3>Inquiries</h3>
+            <p><a href="mailto:info@rajhiholdings.com">info@rajhiholdings.com</a></p>
+            
+            <p>DMM: <a href="tel:+966138055555">+966 13 805 5555</a></p>
+         
+            <p>BH:  <a href="tel:+97317564100">+966 1 756 4100</a></p>
+          </div>
+          <div class="contact-item">
+            <h3>Bahrain</h3>
+            <p>Harbour House<br>
+               Bahrain Financial Harbour<br>
+               King Faisal Highway<br>
+               Manama, Bahrain</p>
+          </div>
+
+      <div class="contact-footer">
+        <a href="hiring.html" class="button">Join Us!</a>
+        <p>1974 ARARCO. All rights reserved.</p>
+      </div>
+      
+    </section>
+   </footer>
+   
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const contactSection = document.querySelector('.contact-section');
+    
+        const handleScroll = () => {
+          const sectionTop = contactSection.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+    
+          if (sectionTop < windowHeight * 0.9) { // Trigger animation when section is 90% in view
+            contactSection.classList.add('visible');
+          }
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Trigger animation on initial load
+      });
+    </script>
+    
+</body>
+
+</html>

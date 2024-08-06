@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Application to ARARCO</title>
+  <meta name="description" content="Application to ARARCO">
+  <meta name="author" content="faisal alassaf">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon-48x48.png" sizes="48x48">
+  <link rel="icon" type="image/png" href="favicon-64x64.png" sizes="64x64">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+</head>
+
+<body class="background-image">
+  <div class="heading-wrapper">
+    <h1> Career Opportunities with ARARCO! </h1>
+  </div>
+
+    <div class="navbar">
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Ararco Logo">
+            ARARCO
+        </a>
+        <a href="index.html#Home">Home</a>
+        <a href="index.html#about-section">About Us</a>
+        <a href="index.html#Contact">Contact Us</a>
+    </div>
+
+  <main class="form-container">
+  <form action="https://formspree.io/f/xovadeyn" method="POST">
+    <div class="form-group">
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first-name" required autocomplete="off" placeholder="">
+    </div>
+
+    <div class="form-group">
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last-name" required autocomplete="off" placeholder="">
+    </div>
+
+    <div class="form-group">
+      <label for="phone-number">Phone Number:</label>
+      <input type="text" id="phone-number" name="phone-number" required placeholder="(000) 000-0000">
+    </div>
+
+    <div class="form-group">
+      <label for="experience">Years of Experience:</label>
+      <input type="number" id="experience" name="experience" required placeholder="5">
+    </div>
+
+    <div class="form-group">
+      <label for="major">Major:</label>
+      <input type="text" id="major" name="major" placeholder="">
+    </div>
+
+    <div class="form-group">
+      <label for="skills">Skills:</label>
+      <textarea id="skills" name="skills" rows="5" required placeholder="List your skills here..."></textarea>
+    </div>
+
+   <!-- Grouped Fields for Previous Employment -->
+<div class="form-group employment-details">
+  <label for="company">Recent Company (if not applicable leave empty):</label>
+  <input type="text" id="company" name="company" placeholder="Company Name">
+
+  <label for="job-title">Job Title:</label>
+  <input type="text" id="job-title" name="job-title" placeholder="Job Title">
+
+  <label for="employment-duration">Employment Duration:</label>
+  <div>
+    <label for="start-date">Start Date:</label>
+    <input type="date" id="start-date" name="start-date" placeholder="YYYY-MM-DD">
+  </div>
+  <div>
+    <label for="end-date">End Date: </label>
+    <input type="date" id="end-date" name="end-date" placeholder="YYYY-MM-DD">
+  </div>
+  <div class="checkbox-container">
+    <label for="currently-working">I am still working here</label>
+    <input type="checkbox" id="currently-working" name="currently-working">
+  </div>
+</div>
+
+
+    <div align="center">
+      <button type="submit" class="button">Submit</button>
+    </div>
+  </form>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const currentlyWorkingCheckbox = document.getElementById('currently-working');
+    const endDateField = document.getElementById('end-date');
+
+    // Function to toggle the visibility of the end date field
+    function toggleEndDateField() {
+      if (currentlyWorkingCheckbox.checked) {
+        endDateField.style.display = 'none';
+      } else {
+        endDateField.style.display = 'inline'; // or 'block' depending on your layout
+      }
+    }
+
+    // Initialize the end date field visibility based on the initial checkbox state
+    toggleEndDateField();
+
+    // Add event listener to the checkbox to handle changes
+    currentlyWorkingCheckbox.addEventListener('change', toggleEndDateField);
+  });
+</script>
+
+
+<footer align="center">
+  <section id="Contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <div class="contact-details">
+      <div class="contact-details">
+        <div class="contact-item">
+          <h3>Dammam</h3>
+          <p>Novotel Business Park<br>
+             King Fahd Highway<br>
+             Al Khalidiyah Ash Shamaliyah<br>
+             Saudi Arabia</p>
+        </div>
+        <div class="contact-item">
+          <h3>Inquiries</h3>
+          <p><a href="mailto:info@rajhiholdings.com">info@rajhiholdings.com</a></p>
+          
+          <p>DMM: <a href="tel:+966138055555">+966 13 805 5555</a></p>
+       
+          <p>BH:  <a href="tel:+97317564100">+966 1 756 4100</a></p>
+        </div>
+        <div class="contact-item">
+          <h3>Bahrain</h3>
+          <p>Harbour House<br>
+             Bahrain Financial Harbour<br>
+             King Faisal Highway<br>
+             Manama, Bahrain</p>
+        </div>
+
+    <div class="contact-footer">
+      <p>1974 ARARCO. All rights reserved.</p>
+    </div>
+    
+  </section>
+ </footer>
+
+
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactSection = document.querySelector('.contact-section');
+      const handleScroll = () => {
+        const sectionTop = contactSection.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight * 0.9) {
+          contactSection.classList.add('visible');
+        }
+      };
+
+      window.addEventListener('scroll', handleScroll);
+      handleScroll();
+    });
+  </script>
+</body>
+</html>
