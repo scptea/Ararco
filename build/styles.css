@@ -663,7 +663,7 @@ form {
   padding: 1em; /* Increased padding for better spacing */
   border-radius: 8px;
   border: 1px solid #555; /* Subtle border for distinction */
-  max-width: 200px;
+  max-width: 10.5em;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly increased shadow for depth */
 }
 
